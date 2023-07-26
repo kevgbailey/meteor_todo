@@ -3,6 +3,7 @@ import { Task } from './Task.jsx';
 import { useTracker } from 'meteor/react-meteor-data';
 import { TasksCollection } from '/imports/api/TasksCollection';
 import { TaskForm } from './TaskForm';
+import Button from '@mui/material/Button';
 
 
 const toggleChecked = ({ _id, isChecked }) => {
@@ -32,7 +33,7 @@ export const App = () => {
       <header>
         <div className="app-bar">
           <div className="app-header">
-            <h1>Welcome to Meteor!</h1>
+            <h1>Meteor To Do App</h1>
           </div>
         </div>
       </header>
@@ -40,9 +41,9 @@ export const App = () => {
       <div className="main">
         <TaskForm />
         <div className = "filter">
-          <button onClick = {() => setHideCompleted(!hideCompleted)}>
+          <Button onClick = {() => setHideCompleted(!hideCompleted)}>
             {hideCompleted ? 'Show All' : 'Hide Completed'}
-          </button>
+          </Button>
         </div>
 
         <ul className="tasks">

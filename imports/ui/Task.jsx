@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 
 export const Task = ({ task, onCheckboxClick, onDeleteClick }) => {
   return <li className = "taskListItem">
@@ -9,6 +10,6 @@ export const Task = ({ task, onCheckboxClick, onDeleteClick }) => {
         readOnly
       />
     <span>{task.text}</span>
-    <button onClick={ () => onDeleteClick(task) }>&times;</button>
+    <Button onClick={ () => onDeleteClick(task) }>&times;</Button>
     </li>
 };
